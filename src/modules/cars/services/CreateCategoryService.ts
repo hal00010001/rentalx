@@ -1,3 +1,4 @@
+import { AppError } from "../../../errors/AppError";
 import { CategoriesRepository } from "../repositories/implementations/CategoriesRepository";
 
 interface IRequest {
@@ -11,7 +12,7 @@ class CreateCategoryService {
   execute({ name, description }: IRequest) {
     const categoryAlreadyExists = this.categoriesRepository.findByName(name);
     if (categoryAlreadyExists) {
-      throw new Error("Category already exists!");
+      throw new AppError("Category already exists!");
     }
     this.categoriesRepository.create({ name, description });
   }
