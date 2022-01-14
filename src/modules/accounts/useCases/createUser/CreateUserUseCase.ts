@@ -1,9 +1,10 @@
+/* eslint-disable import/no-unresolved */
 import { hash } from "bcrypt";
 import { inject, injectable } from "tsyringe";
 
-import { AppError } from "../../../../errors/AppError";
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { IUserRepository } from "../../repositories/IUserRepository";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+import { IUserRepository } from "@modules/accounts/infra/typeorm/repositories/IUserRepository";
+import { AppError } from "@shared/errors/AppError";
 
 @injectable()
 class CreateUserUseCase {

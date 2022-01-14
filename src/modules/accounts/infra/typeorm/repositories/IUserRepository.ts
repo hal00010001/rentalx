@@ -1,4 +1,6 @@
-import { ICreateUserDTO } from "../dtos/ICreateUserDTO";
+/* eslint-disable import/no-unresolved */
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
+
 import { User } from "../entities/User";
 
 interface IUserRepository {
