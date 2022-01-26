@@ -5,6 +5,8 @@ import { IUserRepository } from "@modules/accounts/infra/typeorm/repositories/IU
 import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository";
 import { CategoriesRepository } from "@modules/cars/infra/typeorm/repositories/CategoriesRepository";
 import { SpecificationsRepository } from "@modules/cars/infra/typeorm/repositories/SpecificationsRepository";
+import { CarsRepository } from "@modules/cars/repositories/CarsRepository";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 import { ICategoriesRepository } from "@modules/cars/repositories/ICategoriesRepository";
 import { ISpecificationRepository } from "@modules/cars/repositories/ISpecificationsRepository";
 
@@ -22,3 +24,5 @@ container.registerSingleton<IUserRepository>(
   "UsersRepository",
   UsersRepository
 );
+
+container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);

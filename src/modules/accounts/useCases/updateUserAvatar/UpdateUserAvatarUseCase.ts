@@ -1,7 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import { inject, injectable } from "tsyringe";
 
+import { IUserRepository } from "@modules/accounts/infra/typeorm/repositories/IUserRepository";
+
 import { deleteFile } from "../../../../utils/file";
-import { IUserRepository } from "../../repositories/IUserRepository";
 
 interface IRequest {
   user_id: string;
